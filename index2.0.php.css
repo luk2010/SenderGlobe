@@ -1,0 +1,120 @@
+/* 
+    Document   : index2.0.php
+    Created on : 20 mars 2012, 23:48:50
+    Author     : jacquestronconi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+    Juste pour tout remettre au propre ;)
+*/
+ 
+body
+{
+    min-width: 800px;
+    
+    margin: 0;
+    
+    background-color: #f7fdfe;
+}
+
+header
+{
+    display: block;
+    position: relative;
+    
+    width: 100%;
+    height: 30px;
+    
+    background-color: #d49e4c;
+}
+
+header > h1
+{
+    display: inline-block;
+    position: relative;
+    
+    top: -6px;
+    
+    color: #4be8fb;
+    font-family: Arial;
+    font-size: 1.6em;
+    
+    line-height: 5px;
+}
+
+header > menu
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    
+    top: -6px;
+    
+    margin-right: 30px;
+}
+
+header > menu > li
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    
+    height: 100%;
+    
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    border-right: 1px solid #603715;
+    
+    text-decoration: none;
+    text-align: center;
+    line-height: 10px;
+}
+
+
+section
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #feeea6;
+    text-align: center;
+}
+
+section > tiers
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 30%;
+    height: 100%;
+    background-color: silver;
+}
+
+section > tiers + tiers
+{
+    width: 39%;
+}
+
+section > tiers + tiers + tiers
+{
+    width: 30%;
+}
+
+section > tiers > a
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #fffea6;
+    text-align: center;
+}
+lor: #fffea6;
+    text-align: center;
+}
