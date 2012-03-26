@@ -222,6 +222,26 @@ class HtmlElement
         return $input;
     }
     
+    public function addCondition($name, $condition)
+    {
+        $condition = new ConditionElement();
+        $condition->setName($name);
+        $condition->setCondition($condition);
+        
+        $this->addChild($condition);
+        return $condition;
+    }
+    
+    public function addTemplate($name, $function)
+    {
+        $template = new TemplateElement();
+        $template->setName($name);
+        $template->setFunction($function);
+        
+        $this->addChild($template);
+        return $template;
+    }
+    
     public function getChildByName($name)
     {
         if(count($this->childs) <= 0)
@@ -374,6 +394,49 @@ class FormElement extends HtmlElement
         $textarea->addText($text);
         
         return $textarea;
+    }
+}
+
+class ConditionElement extends HtmlElement
+{
+    protected $condition = true;
+    
+    public function setCondition($condition)
+    {
+        $this->condition = $condition;
+    }
+    
+    public function toPlainHTML() {
+        if($this->condition)
+        {
+            if(count($this->childs) > 0)// C'est un element fini
+            {
+                $html = '';
+                
+                foreach($this->childs as $child)
+                {
+                    $html .= $child->toPlainHTML();
+                }
+                
+                return $html;
+            }
+        }
+    }
+}
+
+class TemplateElement extends HtmlElement
+{
+    protected $ptrfunc = NULL;
+    
+    public function setFunction($ptrfunc)
+    {
+        $this->ptrfunc = $ptrfunc;
+    }
+    
+    public function toPlainHTML() {
+        
+        $text = call_user_func($this->ptrfunc, $this->parent);   
+        return $text;
     }
 }
 
