@@ -23,7 +23,7 @@ body
     width: 100%;
     min-height: 600px;
     margin: 0px;
-
+    
     
 }
 
@@ -154,6 +154,7 @@ menu a
 }
 #general
 {
+    box-shadow: 0px 2px 5px #d49e4c;
     margin-left: 47px;
 }
 #destination
