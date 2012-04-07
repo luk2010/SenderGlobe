@@ -10,6 +10,7 @@ class HtmlElement
     protected $id = '';
     protected $balise = '';
     protected $name = '';
+    public $mustFinite = false;
     
     protected $properties = array();
     
@@ -18,7 +19,7 @@ class HtmlElement
         return $this->childs;
     }
     
-    public function getParents()
+    public function getParent()
     {
         return $this->parent;
     }
@@ -46,6 +47,20 @@ class HtmlElement
     public function getBalise()
     {
         return $this->balise;
+    }
+    
+    public function getBody()
+    {
+        $next = $this->parent;
+        while($next->getBalise() != 'body')
+        {
+            $next = $next->getParent();
+            
+            if($next == NULL)
+                break;
+        }
+        
+        return $next;
     }
     
     public function addChild($child)
@@ -92,6 +107,11 @@ class HtmlElement
         $this->balise = $b;
     }
     
+    public function mustBeFinite($f)
+    {
+        $this->mustFinite = $f;
+    }
+    
     public function toPlainHTML()
     {
         $html = '';
@@ -124,7 +144,11 @@ class HtmlElement
         if($this->name != '')
             $html .= 'name="'.$this->name.'" ';
         
-        if(count($this->childs) > 0)// C'est un element fini
+        if($this->mustFinite == true)
+        {
+            $html .= '/>';
+        }
+        else if(count($this->childs) > 0)// C'est un element fini
         {
             $html .= '>';
             
@@ -138,7 +162,8 @@ class HtmlElement
         }
         else
         {
-            $html .= '/>';
+            $html .= '>';
+            $html .= '</'.$this->balise.'>';
             return $html;
         }
     }
@@ -151,9 +176,9 @@ class HtmlElement
         $element->setName($name);
         $element->setID($id);
         
-        foreach($class as $class_)
+        foreach($class as $class_u)
         {
-            $element->addClass($class_);
+            $element->addClass($class_u);
         }
         
         $this->addChild($element);
@@ -168,9 +193,9 @@ class HtmlElement
         return $element;
     }
     
-    public function addParagraphe($text, $class = array())
+    public function addParagraphe($text, $class = array(), $id = '')
     {
-        $p = $this->createChild('p', '', '', $class);
+        $p = $this->createChild('p', '', $id, $class);
         $p->addText($text);
         
         return $p;
@@ -222,6 +247,7 @@ class HtmlElement
         return $input;
     }
     
+<<<<<<< HEAD
     public function addCondition($name, $condition)
     {
         $condition = new ConditionElement();
@@ -230,6 +256,16 @@ class HtmlElement
         
         $this->addChild($condition);
         return $condition;
+=======
+    public function addCondition($name, $condition = false)
+    {
+        $conditionChild = new ConditionElement();
+        $conditionChild->setName($name);
+        $conditionChild->setCondition($condition);
+        
+        $this->addChild($conditionChild);
+        return $conditionChild;
+>>>>>>> 5616cde55bf1f728368ab9cbcd9d64f6ee164f1d
     }
     
     public function addTemplate($name, $function)
@@ -242,6 +278,79 @@ class HtmlElement
         return $template;
     }
     
+<<<<<<< HEAD
+=======
+    public function importHtml($html)
+    {
+        $dom = new DOMDocument();
+        $dom->loadXML($html);
+        
+        $elements_list = $dom->getElementsByTagName('*');
+        $parent = $elements_list->item(0)->parentNode;
+        
+        foreach($elements_list as $element)
+        {
+            $this->importFromDomNode($parent, $element);
+        }
+        
+        return $this;
+    }
+    
+    public function importFromDomNode($parent, $element)
+    {
+        if(($element instanceof DOMNode) == false)
+            return;
+        
+        if($element->parentNode != $parent)
+            return;
+        
+        if($element->nodeType == XML_TEXT_NODE)
+        {
+            $this->addText($element->nodeValue);
+        }
+            
+        else
+        {
+            $child = $this->createChild($element->tagName);
+                
+            foreach($element->attributes as $attr)
+            {
+                if($attr->nodeName == 'id')
+                {
+                    $child->setID($attr->nodeValue);
+                }
+                else if($attr->nodeName == 'name')
+                {
+                    $child->setName($attr->nodeValue);
+                }
+                else if($attr->nodeName == 'class')
+                {
+                    $child->addClass($attr->nodeValue);
+                }
+                else
+                {
+                    $child->addProperty($attr->nodeName, $attr->nodeValue);
+                }
+            }
+                
+            if($element->hasChildNodes())
+            {
+                 foreach($element->childNodes as $subchild)
+                 {
+                     $child->importFromDomNode($element, $subchild);
+                 }
+            }
+            
+            if($child->getBalise() == 'textarea' and count($child->childs) == 0)
+            {
+                $child->addText('');
+            }
+        }
+        
+        return $this;
+    }
+    
+>>>>>>> 5616cde55bf1f728368ab9cbcd9d64f6ee164f1d
     public function getChildByName($name)
     {
         if(count($this->childs) <= 0)
@@ -349,6 +458,13 @@ class HtmlElement
             }
         }
     }
+    
+    public function returnToLine($times = 1)
+    {
+        for($i = 0; $i < $times; $i++) {
+            $this->createChild('br');
+        }
+    }
 }
 
 class TextElement extends HtmlElement 
@@ -370,7 +486,7 @@ class FormElement extends HtmlElement
 {
     public function addInput($label_text, $name, $type, $value, $id = '', $class = array()) {
         
-        if($type != 'button' and $type != 'submit') {
+        if($type != 'button' and $type != 'submit' and $label_text != '') {
             $label = $this->createChild('label', 'label_'.$name, 'label_'.$name);
             $label->addProperty('for', $name);
             $label->addText($label_text);
@@ -399,6 +515,7 @@ class FormElement extends HtmlElement
 
 class ConditionElement extends HtmlElement
 {
+<<<<<<< HEAD
     protected $condition = true;
     
     public function setCondition($condition)
@@ -410,6 +527,19 @@ class ConditionElement extends HtmlElement
         if($this->condition)
         {
             if(count($this->childs) > 0)// C'est un element fini
+=======
+    public $condition = false;
+    
+    public function setCondition($condition)
+    {
+        $this->condition = ($condition == true);
+    }
+    
+    public function toPlainHTML() {
+        if($this->condition == true)
+        {
+            if(count($this->childs) > 0)
+>>>>>>> 5616cde55bf1f728368ab9cbcd9d64f6ee164f1d
             {
                 $html = '';
                 
@@ -435,9 +565,29 @@ class TemplateElement extends HtmlElement
     
     public function toPlainHTML() {
         
+<<<<<<< HEAD
         $text = call_user_func($this->ptrfunc, $this->parent);   
+=======
+        $text = call_user_func($this->ptrfunc);   
+>>>>>>> 5616cde55bf1f728368ab9cbcd9d64f6ee164f1d
         return $text;
     }
 }
 
+<<<<<<< HEAD
+=======
+class ScriptElement extends HtmlElement
+{
+    public $jsConstructor = NULL;
+    
+    public function toPlainHTML()
+    {
+        if($this->jsConstructor != NULL)
+            return $this->jsConstructor->draw();
+        
+        return '';
+    }
+}
+
+>>>>>>> 5616cde55bf1f728368ab9cbcd9d64f6ee164f1d
 ?>

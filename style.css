@@ -23,7 +23,8 @@ body
     width: 100%;
     min-height: 600px;
     margin: 0px;
-
+   
+    
     
 }
 
@@ -74,9 +75,8 @@ menu
 {
     display: inline-block;
     vertical-align: top; 
-    
     margin-top: 8px;
-    margin-right: 30px;
+
 }
 
 /*
@@ -95,7 +95,8 @@ menu a
     border-radius: 4px 4px 4px 4px;
     padding: 3px;
     box-shadow: 0px -4px 5px #edfffe;
- 
+    text-align: right;
+    
 }
 
 
@@ -105,7 +106,7 @@ menu a
 
 #settings
 {
-    margin-left:230px;
+    margin-left: 620px;
 }
 
 /*
@@ -119,6 +120,7 @@ menu a
     width: 100%;
     height: 60px;
     margin-top: 10px;
+
     
 }
 #cadre_navigation
@@ -126,8 +128,11 @@ menu a
 
     width: 1000px;
     height: auto;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    white-space: nowrap;
+   
     
 }
 /* boutons bleus de la navigation ( general sehop lovers , et destination age sexe)*/
@@ -139,37 +144,39 @@ menu a
     color: #d49e4c;
     border: 1px solid silver;
     border-radius: 3px 3px 3px 3px;
-    height: 20px;
-    width: 70px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 15px;
+    height: 25px;
+    width: 67px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    text-orientation: upright;
     text-decoration: none;
     font-family: arial;
     font-size: 1.1em;
     text-align: center;
     background-color: #edfffe;
-    box-shadow: 0px -2px 5px #d49e4c;
+    box-shadow: 0px -1px 2px #d49e4c;
+
     
 }
-#general
+#planche
 {
-    margin-left: 47px;
-}
-#destination
-{
-    margin-left: 21px;
+    display: inline-block;
+    border: 1px solid silver;
+    border-radius: 3px 3px 3px 3px;
+    width: auto;
+    height: 29px;
+    margin: 0px;
+    vertical-align: top;
 }
 /* bouton "send" */
 #envoyer
 {
     width: 35px;
-    height: 32px;
+    height: 20px;
     vertical-align: top;
-    margin-top: 15px;
-    margin-left: 20px;
-    border: 1px solid silver;
-    border-radius: 3px 3px 3px 3px;
+    background-image: url("enveloppe.jpg");
+    margin-top:4px;
+    border: none;
 
 }
 /* cadre ou l'on peut ecrire */
@@ -178,24 +185,30 @@ menu a
     display: inline-block;
     position: relative;
     min-width: 330px;max-width: 330px;
-    min-height: 52px;max-height: 52px;
-    border: 1px solid silver;
-    border-radius: 2px 2px 2px 2px;
-    margin-top: 3px;
+    min-height: 25px;max-height: 25px;
+    appearance: normal;
+    margin : 0px;
     vertical-align: top;
     margin-left:-5px;
+    resize: none;
+    border: none;
+    font-family: arial;
+    font-size: 0.8em;
 }
 /* bouton "search" */
 #rechercher
 {
    
-    width: 35px;
-    height: 32px;
+    width: 28px;
+    height: 25px;
     vertical-align: top;
-    margin-top: 15px;
-    border: 1px solid silver;
-    border-radius: 3px 3px 3px 3px;
-    margin-left: -7px;
+    background-image: url("loupe.jpg");
+    margin-top:3px;
+    border: none;
+
+    
+    
+
 }
 /*bloc qui encadre le bloc page et la partie media*/
 #centre
@@ -205,23 +218,33 @@ menu a
     width: 1000px;
     margin-right: auto;
     margin-left:  auto;
-    margin-top: 25px;
+    padding-top: 10px;
+    padding-right: 10px;
     min-width: 1000px;
     height: auto;
+    border-right: 1px solid #dddbdb;
 }
-/* bloc du profil a gauche de l'écran */
+/* bloc du profil a haut de l'écran */
 #mon_profil
 {
-    display: inline-block;
     position: relative;
-    width: 100%;
+    width: 1010px;
     height: auto;
+    border: 1px solid #dddbdb;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+
+    
 }
 
 /* ecriture des mots dans le profil*/
 #mon_profil a
 {   
-    display: inline-block;
+    display:inline-block;
     position: relative;
     text-align: center;
     margin-top: 10px;
@@ -238,11 +261,10 @@ menu a
     position: relative;
     background-color: #edfffe;
     margin: 0px;
+    margin-left: 20%;
     color: #d49e4c;
     border: 1px solid silver;
-    border-bottom: none;
-    border-right: none;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 3px 3px;
     height: 20px;
     width: 10%;
     padding-top: 5px;
@@ -250,7 +272,7 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c;
+    box-shadow: 0px -1px 2px #d49e4c;
 }
 
 
@@ -265,6 +287,26 @@ menu a
     vertical-align: top;
 }
 
+#cadre_messages
+{
+    position: relative;
+    border-top: 1px solid #b4d2d9;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 17px 17px 0px 0px;
+    
+}
+
+#img_messages
+{
+    display: block;
+    width: 100%;
+    position: relative;
+    
+
+}
 
 /* cadre qui code pour les reponses au centre de l'écran */
 #cadre_haut
@@ -288,9 +330,6 @@ menu a
     position: relative;
     margin: 0px;
     color: #d49e4c;
-    border: 1px solid silver;
-    border-left: none;
-    border-bottom: none;
     border-radius: 3px 3px 3px 3px;
     height: 20px;
     width: 100%;
@@ -299,31 +338,84 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c;
+    box-shadow: 0px -1px 2px #d49e4c;
 }
 /* cadre comprenant les noms des gens qui repondent et leur réponses */
 #cadre_haut p
 {
-    border-bottom: 1px solid #e6f8ff;
     font-family: arial;
     font-size: 0.8em;
-    margin-top: 15px;
-    padding-bottom: 10px;
     max-height: 300px;
     max-width: 100%;
     color: #423203;
+    margin-left: 10px;
+    
+}
+#survol
+{
+    border: 1px solid #b3d8dd;
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 0px 2px #b3d8dd;
     
 }
 /* ne comprend que les noms et prénoms des gens qui répondent */
 #cadre_haut a
 {
+    display:block;
     position:relative;
     color: #d49e4c;
     font-family: arial;
     font-size: 0.8em;
-    height: 100%;
+    height: auto;
     width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
 
+}
+#profil_bulle
+{
+    display:block;
+    border: 1px solid black;
+}
+#info_profil
+{
+    display: inline-block;
+    width: auto;
+    margin-left: 30px;
+}
+#info_profil p
+{
+    display: block;
+    position: relative;
+    width: auto;
+    text-align: center;
+    margin: 0px;
+    color: #a65b0f;
+    font-family: arial;
+    font-size: 0.9em;
+    padding: 15px;
+}
+#bulle_media
+{
+    display:inline-block;
+    position: relative;
+    vertical-align: top;
+
+}
+#bulle_media p
+{
+    display: block;
+    position: relative;
+    width: auto;
+    text-align: center;
+    margin: 0px;
+    color: #a65b0f;
+    font-family: arial;
+    font-size: 0.9em;
+    padding: 15px;
 }
 #defilement
 {
@@ -337,6 +429,7 @@ menu a
 #cadre_img
 {
     width: auto;
+    
 }
 /*parametrage des images elles ont toutes le meme code donc. */
 #img
@@ -345,12 +438,13 @@ menu a
     width: 80px;
     max-height: 80px;
     box-shadow: 2px 2px 10px #95bbb9;
+    margin-left: 10px;
     
 }
 /* codage es overflow sa t'avais compris je pense :P*/
 #overflow
 {
-    height: 868px;
+    max-height: 868px;
     overflow :auto;
     
 }
@@ -365,7 +459,6 @@ menu a
     max-height: 100%;
     margin-top: 15px;
     vertical-align: top;
-    border-left: 1px solid #d9dada;
     border-radius: 3px 0px 0px 0px;
 }
 /*codage du titre du cadre*/
@@ -376,9 +469,6 @@ menu a
     position: relative;
     margin: 0px;
     color: #d49e4c;
-    border: 1px solid silver;
-    border-right: none;
-    border-bottom: none;
     border-radius: 3px 3px 3px 3px;
     height: 20px;
     width: 100%;
@@ -387,7 +477,7 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c;
+    box-shadow: 0px -1px 2px #d49e4c;
 }
 /*cadre qui code les noms et ce qu'ils disent*/
 #resultats p
@@ -417,12 +507,10 @@ menu a
     display: inline-block;
     position: fixed;
     margin-top: 15px;
-    width: 248px;
-    height: 400px;;
+    width: 250px;
+    height: 430px;;
     border: 1px solid silver;
     border-top: none;
-    border-radius: 4px 0px 0px 0px;
-    vertical-align: bottom;
 }
 /*titre du cadre de la messagerie*/
 #titre_messagerie
@@ -432,9 +520,6 @@ menu a
     position: relative;
     margin:0px;
     color: #d49e4c;
-    border: 1px solid silver;
-    border-left: none;
-    border-bottom: none;
     border-radius: 3px 3px 0px 0px;
     height: 20px;
     width: 100%;
@@ -443,7 +528,7 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c; 
+    box-shadow: 0px -1px 2px #d49e4c; 
 }
 /* cadre comprenant les noms des gens qui parlent et ce qu'ils disent */
 #messagerie p
@@ -466,23 +551,20 @@ menu a
     margin: 0px;
     
 }
-#cadre_ecriture
-{
-    display: inline-block;
-    position: relative;
-    width: 248px;
-    height: auto;
-    border-top: 1px solid silver;
- 
     
-}
+
 #ecriture
 {
-    display: inline-block;
+    display:block;
     width: 100%;
-    border: none;
+    height: auto;
     font-family: arial;
     font-size: 0.8em;
+    resize: none;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    border-right: none;
+    border-left: none;
 }
 #bouton
 /*cadre du bas qui gere les titres le diapo fin tou en bas */
@@ -524,7 +606,7 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c; 
+    box-shadow: 0px -1px 2px #d49e4c; 
  
 }
 /* codage des dossiers des photos*/
@@ -590,7 +672,7 @@ menu a
     font-family: arial;
     font-size: 0.9em;
     text-align: center;
-    box-shadow: 0px -2px 5px #d49e4c; 
+    box-shadow: 0px -1px 2px #d49e4c; 
  
 }
 #videos a
