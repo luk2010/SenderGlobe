@@ -8,15 +8,22 @@ function Center_Function()
     ?>
         <div id="centre">
          
-            <div id="mon_profil">
-            <h3 id="titre_profil">Leo Maurel</h3>
-            <a id="age">18 years</a>
-            <a id="pays">France</a>
-            <a id="envoyes">sent</a>
-            <a id="recus">recieved</a>
-            <a id="top5">best messages</a>
-           
-       </div>
+           <section id="navigation">
+        <div id="cadre_navigation">
+        
+            <a id="general" href="#">general</a>
+            <a id="eshop" href="#">eshop</a>
+            <a id="lovers" href="#">lovers</a>
+            <div id="planche">
+                <input id="envoyer" type="button">
+                <textarea name="texte" id="zone_texte"></textarea>
+                <input id="rechercher" type="button">
+            </div>   
+            <a id="destination" href="#">place</a>
+            <a id="age_navi" href="#">old</a>
+            <a id="sexe" href="#">genre</a>
+        </div>
+   </section>
             
             
             <div id="bloc_page">
@@ -24,44 +31,71 @@ function Center_Function()
             <div id="cadre_haut">
                 <h3 id="titre_cadre_haut">answers of your message</h3>
                 <div id="overflow">
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><div id="cadre_img"><div id="defilement"><a>< 2/18 ></a><img id="img" src="044.jpg"/></div></div><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><img id="img" src="dsc-2674.jpg"/><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><img id="img" src="Snow-Leopard.jpg"/><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
-                  </div>              
-            </div>
-             <div id="resultats">
+                
+                    <div id="cadre_messages"><a href="#">Leo Maurel :</a><div id="profil_bulle"><div id="info_profil"><p>18 years</p><p>France</p><p>14500</p><p>12345</p></div><div id="bulle_media"><p id="bulle_photos">photos</p><p id="bulle_videos">videos</p></div></div><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Jacques Tronconi :</a><img id="img" src="044.jpg"/><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p><img id="img_messages" src="fleche_messages.jpg"/></div> 
+                
+                    <div id="cadre_messages"><a href="#">Nicolas Sarkozy :</a><img id="img" src="dsc-2674.jpg"/><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Nicolas Sarkozy :</a><img id="img" src="Snow-Leopard.jpg"/><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                
+                    <div id="cadre_messages"><a href="#">Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p><img id="img_messages" src="fleche_messages.jpg"/></div>
+                </div></div>              
+            
+             
+              <div id="resultats">
                 <h3 id="titre_resultats">search's results</h3>
                 <div id="overflow">
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
-                <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
-                <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
-                <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
-                <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
+                
+                    <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
+                
+                    <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
+                
+                    <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
+                
+                    <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
+                
+                    <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
+                
+                    <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
+                
+                    <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
+                
+                    <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
+                
+                    <a>Leo Maurel :</a><p> lieajfu dzd, djedj"ozkdlz,d zindie,d;s ks,xsoi</p>
+                
+                    <a>Jacques Tronconi :</a><p> kdzod !! d"kdkod"d,"od jzihjd sjnxksnxh ksnxks,xnsixjskx,sk</p>
+                
+                    <a>Nicolas Sarkozy :</a><p> old"j,kdj zid jksn xjqs gx ysagvx hsbxefx e g h</p>
+                
+                    <a>Maxime Zerillo :</a><p> juiladzjcc hdeic ehcihdceb cue _ncez ?</p>
              </div></div>
+                
+                
         <div id="messagerie">
             <h3 id="titre_messagerie">Jacques tronconi</h3>
-            <div id="overflow_messagerie">
+            
             <a>Leo :</a><p> hissnskcnsls,lc,c ?</p>
             <a>Jacques :</a><p> j'ai pas compriis mdr</p>
             <a>Leo :</a><p> non rien je teste le site pour voir si sa marche et sa a l'air de fonctionner :)</p>
             <a>Jacques :</a><p> ouai lol ya encore du boulot xD</p>
-            </div>
+     
             <div id="cadre_ecriture">
             <textarea id="ecriture"></textarea>
             </div>

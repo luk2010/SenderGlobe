@@ -28,22 +28,16 @@ function Header_Func($title, $description)
             </menu>  
           </div>  
         </header>
-    <section id="navigation">
-        <div id="cadre_navigation">
-        
-            <a id="general" href="#">general</a>
-            <a id="eshop" href="#">eshop</a>
-            <a id="lovers" href="#">lovers</a>
-            
-                <input id="envoyer" type="button" value="send">
-                <textarea name="texte" id="zone_texte"></textarea>
-                <input id="rechercher" type="button" value="search">
-                
-            <a id="destination" href="#">place</a>
-            <a id="age_navi" href="#">old</a>
-            <a id="sexe" href="#">genre</a>
-        </div>
-   </section>
+
+             <div id="mon_profil">
+            <h3 id="titre_profil">Leo Maurel</h3>
+            <a id="age">18 years</a>
+            <a id="pays">France</a>
+            <a id="envoyes">sent</a>
+            <a id="recus">recieved</a>
+            <a id="top5">best messages</a>
+           
+       </div>
 
     <?php
 }
